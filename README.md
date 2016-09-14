@@ -6,7 +6,7 @@ Library allows to read and calibrate modules based on CO2 sensor.
 
  ![TGS4161](images/TGS4161.jpg)
 
- ## MG811
+## MG811
 
  ![MG811](images/MG811.jpg)
 
@@ -20,7 +20,7 @@ Library allows to read and calibrate modules based on CO2 sensor.
 
  ![TGS4161 wiring](images/tgs4161_schem.png)
 
- [Example of module wiring in Fritzing](schemes/tgs4161.fzz)
+ [Module wiring in Fritzing](schemes/tgs4161.fzz)
 
 # Calibration Theory
 
@@ -42,7 +42,7 @@ where
  * `a` - a parameter which we'll change during calibration. (Initially 1500)
  * `b` - a constant. 600 in our case
 
- ## Software calibration
+## Software calibration
 
 In order to calibrate we should modify `a` value using this formula
 
