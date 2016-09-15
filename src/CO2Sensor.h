@@ -19,7 +19,7 @@ class CO2Sensor
     int _analogPin;
     int _co2_v;
     double _co2_a;
-    int _co2ppm;
+    double _co2ppm;
 };
 
 #endif
