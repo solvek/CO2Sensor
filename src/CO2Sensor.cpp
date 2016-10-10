@@ -1,7 +1,7 @@
 #include "CO2Sensor.h"
 
 // CO2 sensor readings
-#define CO2SENSOR_DEBUG true
+#define CO2SENSOR_DEBUG false
 
 const int co2_b = 600;
 const int co2_d = 400;
