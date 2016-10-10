@@ -71,3 +71,7 @@ void CO2Sensor::init(){
   _co2_a = 1500;
   _co2ppm = co2_d;
 }
+
+int CO2Sensor::getVoltage(){
+  return _co2_v;
+}

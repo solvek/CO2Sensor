@@ -16,6 +16,8 @@ class CO2Sensor
     int read();
     void calibrate();
 
+    int getVoltage();
+
   private:
     void init();
 
