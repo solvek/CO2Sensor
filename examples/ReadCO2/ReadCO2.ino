@@ -1,10 +1,11 @@
 #include "CO2Sensor.h"
 
-CO2Sensor co2Sensor(A0);
+CO2Sensor co2Sensor(A0, 0.99, 100);
 
 void setup() {
   Serial.begin(9600);
   Serial.println("=== Initialized ===");
+  co2Sensor.calibrate();
 }
 
 void loop() {
@@ -12,7 +13,5 @@ void loop() {
   Serial.print("CO2 value: ");
   Serial.println(val);
 
-  delay(10000);
-  
-//  co2Sensor.calibrate();
+  delay(1000);
 }
