@@ -6,6 +6,9 @@
 const int co2_b = 600;
 const int co2_d = 400;
 
+#define CO2_LOW 600
+#define CO2_HIGHT 1000
+
 CO2Sensor::CO2Sensor(int analogPin){
   _inertia = 0.99;
   _tries = 3;
@@ -47,6 +50,12 @@ int CO2Sensor::read(){
   Serial.println(" ppm");
   #endif
 
+  if (_co2ppm<CO2_LOW) _greenLevel = 255;
+  else {
+    if (_co2ppm>CO2_HIGHT) _greenLevel = 0;
+    else _greenLevel = map(_co2ppm, CO2_LOW, CO2_HIGHT, 255, 0);
+  }
+
   return _co2ppm;
 }
 
@@ -74,4 +83,12 @@ void CO2Sensor::init(){
 
 int CO2Sensor::getVoltage(){
   return _co2_v;
+}
+
+int CO2Sensor::getGreenLevel(){
+  return _greenLevel;
+}
+
+int CO2Sensor::getRedLevel(){
+  return 255-_greenLevel;
 }

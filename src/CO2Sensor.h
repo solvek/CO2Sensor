@@ -18,6 +18,9 @@ class CO2Sensor
 
     int getVoltage();
 
+    int getGreenLevel();
+    int getRedLevel();
+
   private:
     void init();
 
@@ -25,6 +28,7 @@ class CO2Sensor
     int _inertia;
     int _tries;
     int _co2_v;
+    int _greenLevel;
     double _co2_a;
     double _co2ppm;
 };
