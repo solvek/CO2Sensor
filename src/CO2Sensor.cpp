@@ -53,7 +53,7 @@ int CO2Sensor::read(){
   if (_co2ppm<CO2_LOW) _greenLevel = 255;
   else {
     if (_co2ppm>CO2_HIGHT) _greenLevel = 0;
-    else _greenLevel = map(_co2ppm, CO2_LOW, CO2_HIGHT, 255, 0);
+    else _greenLevel = map((int)_co2ppm, CO2_LOW, CO2_HIGHT, 255, 0);
   }
 
   return _co2ppm;
